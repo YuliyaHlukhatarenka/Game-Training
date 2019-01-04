@@ -1,0 +1,10 @@
+<div class="container">
+  <label>Make your choice: </label>
+  <select (change)="onChangeValue($event)">
+    <option *ngFor="let selectionValue of data" value={{selectionValue.value}}>
+      {{ selectionValue.viewValue }}
+    </option>
+  </select>
+  <button (click)="onCancelClick()">Cancel</button>
+  <button (click)="openOkClick()">Ok</button>
+</div>

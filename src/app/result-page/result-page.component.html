@@ -1,0 +1,18 @@
+<div>
+    <p>{{congratulationMessage}}</p>
+</div>
+<h2>Table of results</h2>
+<table>
+    <tr>
+        <th>Player Name</th>
+        <th>Passed Level</th>
+    </tr>
+    <ng-container *ngFor="let winer of winers | async">
+        <tr>
+            <td>{{ winer.email | json }}</td>
+            <td>{{winer.level}}</td>
+        </tr>
+    </ng-container>
+</table>
+<button (click)="playAgain()">Play again</button>
+<button (click)="gotoLandingPage()">Login as another Player</button>

@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Arithmetic Operation Task</h1>
+    <div>
+        <h1>Solve: {{exercise}} = </h1>
+        <input type="text" [(ngModel)]="enteredResult" placeholder="Enter result" />
+        <button (click)="checkResult()">Submit</button>
+    </div>
+    <div>
+        <h2>{{resultMessage}}</h2>
+        <h2>{{resultValue}}</h2>
+    </div>
+</div>

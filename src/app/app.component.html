@@ -1,0 +1,42 @@
+<landing-page 
+    *ngIf="isNeedShowLandingPage" 
+    (onStartGame)="onStartGame($event)">
+</landing-page>
+
+<info-page 
+    *ngIf="isNeedShowInfoPage"
+    [(infoText)]="infoForUser">
+</info-page>
+
+<main-scene #mainSceneComponent
+    *ngIf="isNeedShowMainScene"
+    (onCloseSpellDialog)="closeSpellDialogHandler($event)"
+    [(activePage)]="activePage"
+    [(playerHealth)]="player.health"
+    [(monsterHealth)]="monster.health"
+    [(playerName)]="player.name"
+    [(monsterName)]="monster.name"
+    [(level)]="currentLevel"
+    [(activeMonsterPict)]="activeMonsterPict"
+    [(kickPlayer)]="kickPlayer"
+    [(kickMonster)]="kickMonster">
+</main-scene>
+
+<arithmetic-operation #arithmeticOperation 
+    *ngIf="isArithmeticOperationActive"
+    (onArithmeticOperationResult)="takeDamage($event)">
+</arithmetic-operation>
+
+<translate-operation #translateOperation 
+    *ngIf="isTranslateOperationActive"
+    (onTranslateOperationResult)="takeDamage($event)">
+</translate-operation>
+
+<result-page #ResultPageComponent 
+    *ngIf="isNeedShowResultPage"
+    (onPlayAgain)="onPlayAgain()"
+    (loadLandingPage)="loadLandingPage()"
+    [(level)]="currentLevel"
+    [(passedLevel)]="passedLevel"
+    [(lastLevel)]="numberOfLevels">
+</result-page>

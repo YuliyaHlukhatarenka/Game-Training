@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true,
+      "noEmit": true,
+      "noEmitHelpers": true,
+      "importHelpers": true,
+      "noUnusedParameters": true,
+      "noUnusedLocals": true,
+      "skipLibCheck": true,
+      "baseUrl": "./src",
+      "paths": {
+          "@angular/*": [
+              "node_modules/@angular/*"
+          ]
+      },
+      "typeRoots": [
+          "node_modules/@types"
+      ],
+      "types": [
+          "node",
+          "uglify-js"
+      ],
+      "lib": [
+          "dom",
+          "es7"
+      ]
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "awesomeTypescriptLoaderOptions": {
+      "forkChecker": true,
+      "useWebpackText": true
+  },
+  "exclude": [
+      "node_modules",
+      ".vscode",
+  ]
+}
