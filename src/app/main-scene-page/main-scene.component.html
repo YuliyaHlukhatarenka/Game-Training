@@ -13,12 +13,12 @@
         </div>
     </div>
     <div class="player-field">
-        <img class="kick-img" @kick-player *ngIf="kickPlayer" src="/assets/img/fire-ball.png">
-        <img class="monster-img" src="/assets/img/monster2.png" alt="Moster Player">
+        <img class="kick-img" @kick-player *ngIf="kickPlayer" src="./assets/img/fire-ball.png">
+        <img class="monster-img" src="./assets/img/monster2.png" alt="Moster Player">
     </div>
     <div class="monster-field">
         <img class="monster-img" src={{activeMonsterPict}} alt="Moster Enemy">
-        <img class="kick-img" @kick-monster *ngIf="kickMonster" src="/assets/img/fire-ball.png">
+        <img class="kick-img" @kick-monster *ngIf="kickMonster" src="./assets/img/fire-ball.png">
     </div>
     <div class="footer-panel">
         <button (click)="openDialog()">Fight</button>

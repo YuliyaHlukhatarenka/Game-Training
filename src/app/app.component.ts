@@ -29,9 +29,9 @@ export class AppComponent {
   public infoForUser = 'Best wishes!';
   public activeMonsterPict: string;
   private pathToPict = [
-    '/assets/img/monster5.png',
-    '/assets/img/monster3.png',
-    '/assets/img/monster6.png'
+    './assets/img/monster5.png',
+    './assets/img/monster3.png',
+    './assets/img/monster6.png'
   ];
 
  public constructor( private afs: AngularFirestore) {}

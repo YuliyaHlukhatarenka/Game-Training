@@ -59,17 +59,17 @@ export class MainScenePageComponent implements OnInit {
     {
       value: ScreenTypesEnum.Red,
       viewValue: 'Red Mountains',
-      pathToImg: '/assets/img/red_mountains_img.png',
+      pathToImg: './assets/img/red_mountains_img.png',
     },
     {
       value: ScreenTypesEnum.Mushroom,
       viewValue: 'Mushroom Field',
-      pathToImg: '/assets/img/mushroom_field_img.png'
+      pathToImg: './assets/img/mushroom_field_img.png'
     },
     {
       value: ScreenTypesEnum.Blue,
       viewValue: 'Blue Lake',
-      pathToImg:  '/assets/img/blue_lake_img.png'
+      pathToImg:  './assets/img/blue_lake_img.png'
     }
   ];
   public spells = [
