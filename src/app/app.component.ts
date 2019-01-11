@@ -36,17 +36,16 @@ export class AppComponent {
 
  public constructor( private afs: AngularFirestore) {}
 
-  public onStartGame(PlayerCredentials: PlayerCredentialsModel): void {
+  public onStartGame(): void {
+     this.activePage = 'login-page';
+  }
+
+  public onGoGame(PlayerCredentials: PlayerCredentialsModel): void {
     this.monster = new Monster();
     this.player = new Player(PlayerCredentials.name, PlayerCredentials.email);
     this.activeMonsterPict = this.pathToPict[0];
     this.passedLevel = 0;
-    this.infoForUser = 'Level 1. Rules: 1. Press Fight button to select a spell. 2. Solve a task to kill monster.'
-      + 'By "Ctrl" keybord button on main-scene you can change the screen.';
-    this.activePage = 'info-page';
-    setTimeout(() => {
-      this.activePage = 'main-scene';
-    }, 10000);
+    this.activePage = 'main-scene';
   }
 
   public onPlayAgain(): void {
@@ -58,11 +57,11 @@ export class AppComponent {
     this.activePage = 'info-page';
     setTimeout(() => {
       this.activePage = 'main-scene';
-    }, 3000);
+    }, 5000);
   }
 
-  public loadLandingPage(): void {
-    this.activePage = 'landing-page';
+  public loadLoginPage(): void {
+    this.activePage = 'login-page';
   }
 
   public takeDamage(isCorrect: boolean): void {
@@ -135,6 +134,10 @@ export class AppComponent {
 
   public get isNeedShowLandingPage(): boolean {
     return this.activePage === 'landing-page';
+  }
+
+  public get isNeedShowLoginPage(): boolean {
+    return this.activePage === 'login-page';
   }
 
   public get isNeedShowInfoPage(): boolean {

@@ -1,0 +1,12 @@
+<div class="login">
+    <div>
+        <p>Enter your credentials to start the game:</p>
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="enteredName" placeholder="Enter your name" />
+        <input type="email" [(ngModel)]="enteredEmail" placeholder="Enter email" required />
+    </div>
+    <div class="start-game-button">
+        <button (click)="goGame()">Go</button>
+    </div>
+</div>

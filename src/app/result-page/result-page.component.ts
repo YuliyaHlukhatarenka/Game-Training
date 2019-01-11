@@ -14,7 +14,7 @@ interface Results {
 })
 export class ResultPagePageComponent implements OnInit {
   @Output() public onPlayAgain = new EventEmitter();
-  @Output() public loadLandingPage = new EventEmitter();
+  @Output() public loadLoginPage = new EventEmitter();
   @Input() public level: number;
   @Input() public lastLevel: number;
   @Input() public passedLevel: number;
@@ -26,7 +26,7 @@ export class ResultPagePageComponent implements OnInit {
   constructor( private afs: AngularFirestore) {};
 
   public ngOnInit(): void {
-    this.winersCollection = this.afs.collection('results', ref => ref.orderBy('level', 'desc').limit(3));
+    this.winersCollection = this.afs.collection('results', ref => ref.orderBy('level', 'desc').limit(10));
     this.winers = this.winersCollection.valueChanges();
     console.log(this.winersCollection, this.winers);
     if (this.level === this.lastLevel) {
@@ -42,7 +42,7 @@ export class ResultPagePageComponent implements OnInit {
     this.onPlayAgain.emit();
   }
 
-  public gotoLandingPage(): void {
-    this.loadLandingPage.emit();
+  public gotoLoginPage(): void {
+    this.loadLoginPage.emit();
   }
 }

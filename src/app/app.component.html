@@ -3,6 +3,11 @@
     (onStartGame)="onStartGame($event)">
 </landing-page>
 
+<login-page 
+    *ngIf="isNeedShowLoginPage" 
+    (onGoGame)="onGoGame($event)">
+</login-page>
+
 <info-page 
     *ngIf="isNeedShowInfoPage"
     [(infoText)]="infoForUser">
@@ -35,7 +40,7 @@
 <result-page #ResultPageComponent 
     *ngIf="isNeedShowResultPage"
     (onPlayAgain)="onPlayAgain()"
-    (loadLandingPage)="loadLandingPage()"
+    (loadLoginPage)="loadLoginPage()"
     [(level)]="currentLevel"
     [(passedLevel)]="passedLevel"
     [(lastLevel)]="numberOfLevels">

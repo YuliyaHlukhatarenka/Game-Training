@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { PlayerCredentialsModel } from '../models/PlayerCredentials.model';
 
 @Component({
@@ -8,14 +8,7 @@ import { PlayerCredentialsModel } from '../models/PlayerCredentials.model';
 })
 export class LandingPageComponent {
     @Output() public onStartGame: EventEmitter<PlayerCredentialsModel> = new EventEmitter<PlayerCredentialsModel>();
-    @Input() public playerName: string;
-    @Input() public playerEmail: string;
-    public enteredName: string;
-    public enteredEmail: string;
-    public PlayerCredentialsModel: PlayerCredentialsModel;
-
     public startGame(): void {
-        this.PlayerCredentialsModel = new PlayerCredentialsModel(this.enteredName, this.enteredEmail);
-        this.onStartGame.emit(this.PlayerCredentialsModel);
+        this.onStartGame.emit();
     }
 }

@@ -3,6 +3,16 @@
   text-align: center;
 }
 
+.rules {
+  background-color: rgba(221, 122, 86, 0.3);
+}
+
+.game-screens {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
 h1 {
   font-size: 42px;
 }
@@ -10,8 +20,11 @@ h1 {
 h2 {
   font-size: 26px;
   color: rgb(85, 82, 90);
+  margin-bottom: 10px;
 }
 
 p {
-  font-size: 18px;
+  font-size: 19px;
+  color: rgb(221, 220, 157);
+  margin: 7px 0;
 }

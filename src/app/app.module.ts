@@ -6,12 +6,12 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 import { MainScenePageComponent } from './main-scene-page/main-scene.component';
 import { SelectionValueDialogComponent } from './shared/selection-value-dialog/selection-value-dialog.component';
 import { ArithmeticOperationDialogComponent } from './task-pages/arithmeticOperation/arithmeticOperation.component';
 import { AppComponent } from './app.component';
 import { ResultPagePageComponent } from './result-page/result-page.component';
-import { LocalStorageService } from './services/local-storage.service';
 import { ReadJsonService } from './services/read-json.service';
 import { TranslateOperationDialogComponent } from './task-pages/translateOperation/translateOperation.component';
 import { SoundService } from './services/sound.service';
@@ -47,6 +47,7 @@ export class MaterialModule {}
   entryComponents: [MainScenePageComponent, SelectionValueDialogComponent],
   declarations: [
     LandingPageComponent,
+    LoginPageComponent,
     MainScenePageComponent,
     AppComponent,
     MainScenePageComponent,
@@ -57,7 +58,7 @@ export class MaterialModule {}
     InfoPageComponent
   ],
   bootstrap: [AppComponent],
-  providers: [LocalStorageService, ReadJsonService, SoundService, RandomService]
+  providers: [ReadJsonService, SoundService, RandomService]
 })
 export class AppModule {}
 platformBrowserDynamic().bootstrapModule(AppModule);
