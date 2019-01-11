@@ -1,8 +1,8 @@
 .game-field {
     display: grid;
-    grid-template-rows: 10% 20% 60% 10%;
+    grid-template-rows: 10% 20% auto 20%;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
+    height: 90vh;
     justify-items: center;
 }
 
@@ -12,34 +12,35 @@ h2 {
 
 
 .info-panel-general {
-    grid-row: 1; 
+    grid-row: 1;
     grid-column: 1 / span 2;
 }
 
 .info-panel-player {
-    grid-row: 2; 
+    grid-row: 2;
     grid-column: 1;
 }
 
 .info-panel-monster {
-    grid-row: 2; 
+    grid-row: 2;
     grid-column: 2;
 }
 .footer-panel {
-    grid-row: 4; 
+    grid-row: 4;
     grid-column: 1 / span 2;
 }
 
 .player-field {
-    grid-row: 3; 
+    grid-row: 3;
     grid-column: 1;
 }
 
 .monster-field {
-    grid-row: 3; 
-    grid-column: 2;
+  grid-row: 3;
+  grid-column: 2;
 }
 
 .kick-img {
-    opacity: 0;
+  opacity: 0;
 }
+
