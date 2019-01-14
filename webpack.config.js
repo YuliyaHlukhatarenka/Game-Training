@@ -46,10 +46,11 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: path.resolve(__dirname, 'src/app'),
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'postcss-loader'],
-        }),
+        // use: ExtractTextPlugin.extract({
+        //   fallback: 'style-loader',
+          // use: ['css-loader', 'postcss-loader'],
+       // }),
+       use: ['to-string-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.css$/,
