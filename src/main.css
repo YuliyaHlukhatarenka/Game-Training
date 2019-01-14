@@ -1,5 +1,5 @@
 body {
-  background-image: url('/assets/img/red_mountains_img.png');
+  background-image: url('../assets/img/red_mountains_img.png');
   background-size: cover;
 }
 
