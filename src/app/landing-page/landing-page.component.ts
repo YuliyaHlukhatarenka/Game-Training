@@ -11,4 +11,10 @@ export class LandingPageComponent {
     public startGame(): void {
         this.onStartGame.emit();
     }
+
+    public ngOnInit(): void {
+      if (!document.body.style.backgroundImage) {
+        document.body.style.backgroundImage = `url('./assets/img/red_mountains_img.png')`;
+      }
+    }
 }
